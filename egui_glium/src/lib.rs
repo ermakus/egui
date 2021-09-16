@@ -416,7 +416,31 @@ pub fn translate_virtual_key_code(key: VirtualKeyCode) -> Option<egui::Key> {
         Y => Key::Y,
         Z => Key::Z,
 
-        _ => {
+        F1 => Key::F1,
+        F2 => Key::F2,
+        F3 => Key::F3,
+        F4 => Key::F4,
+        F5 => Key::F5,
+        F6 => Key::F6,
+        F7 => Key::F7,
+        F8 => Key::F8,
+        F9 => Key::F9,
+        F10 => Key::F10,
+        F11 => Key::F11,
+        F12 => Key::F12,
+
+        LAlt | RAlt => Key::Alt,
+        LControl | RControl => Key::Control,
+        RShift | LShift => Key::Shift,
+        RWin | LWin => Key::Windows,
+        Capital => Key::CapsLock,
+        Snapshot => Key::PrintScreen,
+        Scroll => Key:: ScrollLock,
+        Pause => Key::Pause,
+        Numlock => Key::NumLock,
+
+        x => {
+            println!("Scancode: {:?}", x);
             return None;
         }
     })
